@@ -2,6 +2,15 @@
 
 Unfortunately, we did not record the real-life performance but only left a few pictures of the system and a testing recording.
 
+## 1D Ball balancing
+![Image Description](000src/outcomes/1.jpg)
+[Watch Demo Video](000src/outcomes/1.mp4)
+
+
+## 2D Ball balancing
+![Image Description](000src/outcomes/2.jpg)
+
+
 ---
 # Project Proposal
 ## Ball Balancing with PID Control
