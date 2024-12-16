@@ -4,6 +4,7 @@ Unfortunately, we did not record the real-life performance but only left a few p
 
 ## 1D Ball balancing
 ![Image Description](000src/outcomes/1.jpg)
+
 [Watch Demo Video](000src/outcomes/1.mp4)
 
 
