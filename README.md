@@ -1,23 +1,73 @@
-Project Proposal – Ball balancing with PID control
-Overview
-The project aims to balance a ball on a square surface using the principles of PID control. The system will consist of a pressure-sensing plate/screen or a camera that detects the ball’s xy-coordinates on the surface and two servo motors that tilt the surface to prevent the ball from falling off the surface. The STM-32 microcontroller will serve as the controller.
-The project consists of two parts. In the first part, the ball will be on a 1-dimensional (1D) guide rail as opposed to a 2-dimensional (2D) surface. The ball’s position will be detected using only an ultrasonic sensor. The rail, controlled only by one servo motor, will tilt clockwise or counterclockwise to prevent the ball from falling off the ends. If the first part is successful, we will implement the aforementioned second part.
-We will implement the control code and assemble the mechanical structure. We will demonstrate how the system tilts the surface real-time to prevent the ball from falling during the lab session.
+# Working Outcome
 
-Background
-The following resources are relevant projects that inspired our design decisions–using a servo motor and using a camera or pressure sensor–about potential structures and methods to complete the project:
--	1D ball balancing by Electronoobs (Infrared Sensor, servo motor, and PID): https://electronoobs.io/tutorial/11#
--	2D ball balancing by Moosenee (Touch resistive screen, servo motors, and PID): https://www.instructables.com/PID-Controlled-Ball-Balancing-Stewart-Platform/
--	2D ball balancing by Giusenso (Computer Vision Module, servo motors, and PID): https://github.com/giusenso/Ball-Balancing-PID-System
+Unfortunately, we did not record the real-life performance but only left a few pictures of the system and a testing recording.
 
-Designer experiences
-This project mainly achieves 3 functions: checking ball’s position (BP), 1D/2D platform controlling (PC), and PID controlling algorithm (PID). Currently, our idea for BP is to use either Camera positioning (SCCB) or Force sensing positioning (USB). For PC, our idea is to use servo motors (controlled by PWM). Both steps require serial communication between the peripheral and microcontroller, which our experience in ECE342 and ECE295 will be useful. Meanwhile, we took ECE311 and ECE470 where we learnt the method of PID control.
+---
+# Project Proposal
+## Ball Balancing with PID Control
 
-Milestones
-M1 - Mar22 - Researching, Material preparation, First part (1D) hardware setup & testing done
-M2 - Mar29 - First part complete, Second part (2D) hardware setup & testing done
-M3 - Apr05 - Second part done
+### Overview
 
-Contingency plans
-We expect the most difficult parts of the project to be the detecting of the ball’s xy-coordinates on the surface (as no simple sensor will be able to accomplish this) and designing a mechanical structure that can precisely control the direction of the surface’s slope (as the interaction of two servo motors can introduce large errors). As a result, a scaled-down version of the project will be attempted first as described in the Overview. As the scaled-down version will only have one degree of freedom and one simple ultrasonic sensor, the risk of failure will be low.
+This project aims to balance a ball on a square surface using **PID control** principles. The system will utilize a pressure-sensing plate/screen or a camera to detect the ball’s xy-coordinates on the surface and two servo motors to tilt the surface to prevent the ball from falling. The control system will be implemented using an **STM-32 microcontroller**.
 
+#### Project Stages
+1. **1D Ball Balancing:**  
+   The ball will be placed on a 1-dimensional (1D) guide rail. Its position will be detected using an **ultrasonic sensor**, and a single servo motor will tilt the rail clockwise or counterclockwise to balance the ball.
+2. **2D Ball Balancing:**  
+   Expanding on the first stage, a 2D surface will be used to balance the ball, with its position detected by a **camera** or **pressure-sensing screen**.
+
+The final system will demonstrate real-time surface tilting to maintain ball stability during the lab session.
+
+---
+
+### Background
+
+This project is inspired by the following works:
+
+- [1D Ball Balancing by Electronoobs](https://electronoobs.io/tutorial/11#)  
+  Infrared sensor, servo motor, and PID control.  
+- [2D Ball Balancing by Moosenee](https://www.instructables.com/PID-Controlled-Ball-Balancing-Stewart-Platform/)  
+  Touch resistive screen, servo motors, and PID control.  
+- [2D Ball Balancing by Giusenso](https://github.com/giusenso/Ball-Balancing-PID-System)  
+  Computer vision module, servo motors, and PID control.  
+
+---
+
+### Functionality
+
+The project implements three primary functionalities:
+
+1. **Ball Positioning (BP):**  
+   Detecting the ball’s position using either **camera-based positioning (SCCB)** or **force-sensing positioning (USB)**.
+2. **Platform Control (PC):**  
+   Controlling the 1D/2D platform using **servo motors** with **PWM signals**.
+3. **PID Control Algorithm (PID):**  
+   Implementing the PID control logic for stable balancing.  
+
+---
+
+### Designer Experience
+
+Relevant courses that provided foundational knowledge:
+- **ECE342** and **ECE295:** Serial communication for peripherals and microcontrollers.
+- **ECE311** and **ECE470:** PID control methods.
+
+---
+
+### Milestones
+
+- **M1 (Mar 22):** Research, material preparation, 1D hardware setup & testing.  
+- **M2 (Mar 29):** Completion of the 1D system, 2D hardware setup & testing.  
+- **M3 (Apr 5):** Completion of the 2D system.  
+
+---
+
+### Contingency Plans
+
+Key challenges include:  
+- Detecting the ball’s xy-coordinates accurately.  
+- Designing a precise mechanical structure for 2D tilting using two servo motors.  
+
+To mitigate risks, the project will start with a **scaled-down 1D version** using an ultrasonic sensor and a single degree of freedom. This simplified approach ensures lower failure risks while building the foundation for the 2D system.
+
+---
